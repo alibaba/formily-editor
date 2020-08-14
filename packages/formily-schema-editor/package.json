@@ -1,6 +1,6 @@
 {
   "name": "@formily-editor/schema-editor",
-  "version": "1.1.0-alpha.0",
+  "version": "1.2.0-alpha.0",
   "license": "MIT",
   "main": "lib",
   "types": "lib/index.d.ts",
@@ -25,7 +25,7 @@
     "url": "git+https://github.com/alibaba/formily-editor.git"
   },
   "devDependencies": {
-    "@formily-editor/extensions": "^1.0.1-alpha.0",
+    "@formily-editor/extensions": "^1.1.0-alpha.0",
     "@formily/next": "1.2.0",
     "@formily/next-components": "1.2.0",
     "@formily/printer": "1.2.0",
