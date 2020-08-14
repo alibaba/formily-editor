@@ -278,17 +278,13 @@ export const useSchemaTree = (props: ISchemaTreeWidgetProps) => {
     if (nodeType === 'leaf') {
       // 添加叶子节点
       if (!(children.length - 1)) { // 当前父节点没有孩子，调用onAppend  
-        // debugger
         onAppend(pathParser(parent), { ...params })
-        // debugger;
       } else { // 如果父节点有孩子，调用onAppendBefore
         const targetpath = children[1].data.path
         onAppendBefore(pathParser(targetpath), { ...params })
-        // debugger;
       }
     } else {
       // 添加兄弟节点
-      // debugger;
       onAppendAfter(pathParser(sourcePath), { ...params })
     }
     setNodeFocus([...parent, params.key].join('.'), params.type)
@@ -325,7 +321,7 @@ export const useSchemaTree = (props: ISchemaTreeWidgetProps) => {
       return false
     }
     if (nextParentChildren.filter(child => child.data.key == key).length > 1) {
-      //该children不是快照，是拖拽的结果，所以计算length时候要注意
+      // 该children不是快照，是拖拽的结果，所以计算length时候要注意
       return false
     }
     return true

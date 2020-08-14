@@ -77,7 +77,6 @@ const NodeRenderer: React.FC<INodeRendererProps> = React.memo((props) => {
   const actived = pathName === selectPath
   const handleSelectRow = () => {
     // 1. 高亮非受控
-    // debugger;
     nodeRendererActions.setActiveNode({ activedNodePath: pathName, nodeType });
     // 2. 设置游标，并通知面板
     handleClick(contentRef.current, node.data.path, nodeAtom)

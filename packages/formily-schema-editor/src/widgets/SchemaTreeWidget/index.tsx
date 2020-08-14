@@ -77,7 +77,7 @@ const SchemaTreeWidget: React.FC<ISchemaTreeWidgetProps> = (props) => {
               </Fragment>
             ),
             onClick: () => { schemaSelect(node) },
-            nodeAtom, // 没有办法，为了生活
+            nodeAtom,
             onUpdate: schemaUpdate(nodeAtom),
             selectPath: activedNodePath ,
             onCancel: schemaRemove(nodeAtom),

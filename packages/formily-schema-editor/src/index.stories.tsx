@@ -9,6 +9,7 @@ import useToggle from './hooks/useToggle'
 import useClipboard from './hooks/useClipboard'
 
 export default { title: "主界面" };
+console.log('xxx');
 
 interface IMode  {
   value: string

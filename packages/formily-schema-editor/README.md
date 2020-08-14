@@ -1,7 +1,5 @@
 # Formily Schema Editor
 
-> 目前暂时仅支持供应链场景的表单Schema编辑器，后续会考虑开源
-
 ## 文档
 
 - [产品文档](https://yuque.antfin-inc.com/ascp-fe/f2e/ac8ki6)
