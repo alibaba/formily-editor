@@ -4,10 +4,6 @@
   "license": "MIT",
   "main": "lib",
   "types": "lib/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alibaba/formily.git"
-  },
   "bugs": {
     "url": "https://github.com/alibaba/formily/issues"
   },
@@ -24,8 +20,9 @@
   "resolutions": {
     "@types/react": "^16.8.23"
   },
-  "publishConfig": {
-    "registry": "https://registry.npm.alibaba-inc.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alibaba/formily-editor.git"
   },
   "devDependencies": {
     "@formily-editor/extensions": "^1.0.1-alpha.0",
@@ -63,5 +60,6 @@
     "react-error-boundary": "^1.2.5",
     "react-eva": "^1.1.7",
     "react-sortable-tree": "^2.7.1"
-  }
+  },
+  "gitHead": "17a6104ef90f96c6e04124f63b55abc07207347c"
 }

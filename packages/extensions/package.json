@@ -18,11 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:ascp-fe/formily-schema-editor-ascp-extensions.git"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npm.alibaba-inc.com"
+    "url": "git+https://github.com/alibaba/formily-editor.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "17a6104ef90f96c6e04124f63b55abc07207347c"
 }
