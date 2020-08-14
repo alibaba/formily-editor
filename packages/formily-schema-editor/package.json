@@ -1,6 +1,6 @@
 {
   "name": "@formily-editor/schema-editor",
-  "version": "1.0.0",
+  "version": "1.1.0-alpha.0",
   "license": "MIT",
   "main": "lib",
   "types": "lib/index.d.ts",
@@ -28,10 +28,10 @@
     "registry": "https://registry.npm.alibaba-inc.com"
   },
   "devDependencies": {
+    "@formily-editor/extensions": "^1.0.1-alpha.0",
     "@formily/next": "1.2.0",
     "@formily/next-components": "1.2.0",
     "@formily/printer": "1.2.0",
-    "@formily-editor/extensions": "^1.0.0",
     "@storybook/react": "^5.3.14",
     "@testing-library/jest-dom": "^4.2.3",
     "@testing-library/react": "^8.0.0",
