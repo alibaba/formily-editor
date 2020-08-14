@@ -11,7 +11,7 @@
     "preserveConstEnums": true,
     "sourceMap": false,
     "declaration": true,
-    "outDir": "lib",
+    "outDir": "./lib",
     "baseUrl": ".",
     "lib": [
       "es6",

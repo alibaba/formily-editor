@@ -1,7 +1,34 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "build": "rimraf -rf packages/*/lib && lerna run build",
+    "publish": "lerna publish"
+  },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "rimraf": "^3.0.0",
+    "prettier": "^1.18.2",
+    "@babel/core": "^7.8.7",
+    "@formily/react": "^1.0.8",
+    "@formily/react-schema-renderer": "^1.0.8",
+    "@formily/shared": "^1.0.8",
+    "@formily/validator": "^1.0.8",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "~2.23.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "typescript": "^3.5.2"
   }
 }

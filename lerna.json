@@ -14,5 +14,8 @@
     }
   },
   "npmClient": "npm",
-  "version": "independent"
+  "version": "independent",
+  "publish": {
+    "conventionalCommits": true
+  }
 }

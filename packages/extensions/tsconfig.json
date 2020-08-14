@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./build",
+    "outDir": "./lib",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "jsx": "react",
