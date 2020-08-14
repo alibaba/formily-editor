@@ -1,0 +1,77 @@
+.linkage-action {
+  display: flex;
+  align-items: top;
+  line-height: 26px;
+
+  &:not(:first-child) {
+    margin-top: 15px;
+  }
+
+  .let {
+    flex-shrink: 0;
+    width: 60px;
+    text-align: right;
+    margin-right: 8px;
+  }
+
+  .target {
+    width: 300px;
+    margin-right: 8px;
+
+    .next-input {
+      width: 100%;
+    }
+  }
+
+  .prop {
+    flex-shrink: 0;
+    margin-right: 8px;
+
+    .next-select {
+      width: 100px;
+    }
+  }
+
+  .set-to {
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  .value {
+    margin-right: 8px;
+
+    &.string {
+      width: 156px;
+    }
+
+    &.boolean {
+      width: 100px;
+    }
+
+    &.array {
+      flex-shrink: 0;
+      // width: 300px;
+    }
+
+    .value-input {
+      width: 100%;
+    }
+
+    .next-select {
+      width: 100%;
+    }
+
+    .array-table-input {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    flex-shrink: 0;
+    width: 40px;
+
+    .linkage-square-btn {
+      vertical-align: middle;
+    }
+  }
+}

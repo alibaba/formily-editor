@@ -1,0 +1,72 @@
+.linkage-condition {
+  display: flex;
+  align-items: top;
+  line-height: 26px;
+
+  &:not(:first-child) {
+    margin-top: 15px;
+  }
+
+  .logic {
+    flex-shrink: 0;
+    width: 60px;
+    text-align: right;
+    margin-right: 8px;
+
+    .next-select {
+      width: 54px;
+    }
+  }
+
+  .target {
+    width: 160px;
+    margin-right: 8px;
+
+    .next-select {
+      width: 100%;
+    }
+  }
+
+  .operator {
+    flex-shrink: 0;
+    margin-right: 8px;
+
+    .next-select {
+      width: 100px;
+    }
+  }
+
+  .value {
+    margin-right: 8px;
+
+    &.string, &.enum, &.reg {
+      width: 200px;
+    }
+
+    &.number, &.boolean {
+      flex-shrink: 0;
+      width: 100px;
+    }
+
+    .next-input {
+      width: 100%;
+    }
+
+    .next-select, .next-number-picker {
+      width: 100%;
+
+      .next-input {
+        width: 100%;
+      }
+    }
+  }
+
+  .buttons {
+    width: 40px;
+    flex-shrink: 0;
+
+    .linkage-square-btn {
+      vertical-align: middle;
+    }
+  }
+}

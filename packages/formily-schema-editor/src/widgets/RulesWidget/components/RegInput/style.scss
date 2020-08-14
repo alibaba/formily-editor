@@ -1,0 +1,16 @@
+$flags-width: 108px;
+
+.reg-input {
+  display: inline-block;
+  width: 100%;
+
+  .content {
+    width: calc(100% - 10px - #{$flags-width});
+    vertical-align: top;
+  }
+
+  .flags {
+    margin-left: 10px;
+    width: $flags-width;
+  }
+}

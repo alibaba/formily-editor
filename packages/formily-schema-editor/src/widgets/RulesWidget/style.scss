@@ -1,0 +1,29 @@
+.rules-widget {
+  // padding: 15px 0;
+
+  .next-radio-wrapper {
+    display: inline-block;
+  }
+
+  .next-number-picker {
+    width: 120px;
+  }
+
+  .next-form-item-control {
+    &>div {
+      min-width: 0;
+    }
+  }
+
+  td:not(:last-child) {
+    .next-form-item-control {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  .array-table-addition {
+    text-align: center;
+  }
+}

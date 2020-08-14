@@ -1,0 +1,29 @@
+.linkage-square-btn {
+  display: inline-block;
+  box-sizing: content-box !important;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dadada;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  text-align: center;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: 'consolas';
+  color: rgb(60, 60, 60);
+
+  &:not(:first-child) {
+    border-left-width: 0 !important;
+  }
+
+  &:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+}

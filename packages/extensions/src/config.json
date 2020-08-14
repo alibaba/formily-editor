@@ -1,0 +1,76 @@
+{
+  "Card": {
+      "title": {
+          "title": "卡片标题"
+      },
+      "subTitle": {
+          "title": "卡片副标题"
+      }
+  },
+  "DatePicker": {
+      "placeholder": {},
+      "format": {
+          "title": "格式",
+          "description": "如：YYYY-MM-DD 为 2020-03-27"
+      },
+      "showTime": {
+          "title": "是否使用时间控件"
+      }
+  },
+  "Form": {
+    "size": {
+      "title": "表单尺寸",
+      "editable": false
+    },
+    "labelAlign": {
+      "title": "标签位置",
+      "editable": false
+    },
+    "labelTextAlign": {
+      "title": "标签对齐方式",
+      "editable": false
+    },
+    "labelCol": {
+      "title": "标签宽度",
+      "description": "标签宽度说明"
+    },
+    "wrapperCol": {
+      "title": "控件宽度",
+      "description": "控件宽度说明"
+    }
+  },
+  "Input": {
+    "placeholder": {},
+    "addonTextBefore": {},
+    "addonTextAfter": {}
+  },
+  "NumberPicker": {
+    "step": {},
+    "precision": {},
+    "innerAfter": {
+      "title": "数字后附加内容"
+    }
+  },
+  "Transfer": {
+    "mode": {
+      "description": "simple代表选中选项后自动移动，normal代表选中选项后需手动点击移动"
+    },
+    "notFoundContent": {
+  
+    },
+    "sortable": {
+  
+    },
+    "showSearch": {
+  
+    }
+  },
+  "TimePicker": {
+    "placeholder": {
+    },
+    "format": {
+      "title": "格式",
+      "description": "如：HH:mm:ss 代表 xx时xx分xx秒"
+    }
+  }
+}

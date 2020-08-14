@@ -1,0 +1,15 @@
+.array-table-input {
+  .next-form-item-control {
+    &>div {
+      min-width: 0 !important;
+    }
+  }
+
+  .next-form-item {
+    margin-bottom: 0;
+  }
+
+  .array-table-addition {
+    margin-bottom: 0 !important;
+  }
+}

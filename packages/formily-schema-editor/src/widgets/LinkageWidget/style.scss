@@ -1,0 +1,53 @@
+.linkage-widget-box {
+  height: 100%;
+  // min-width: 692px;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 12px 20px;
+
+  .linkage-widget {
+    .toolbar {
+      text-align: right;
+      margin-bottom: 8px;
+    }
+
+    .rule-list {
+      padding: 0 20px;
+    }
+
+    .add-new {
+      margin: 0;
+      text-align: center;
+      line-height: 36px;
+      border: 1px dashed #dadada;
+      cursor: pointer;
+      .next-btn{
+        font-size: 12px;
+      }
+    }
+  }
+
+  .next-select {
+    min-width: 0 !important;
+  }
+
+  .next-select-inner {
+    min-width: 0 !important;
+  }
+
+  .next-form {
+    display: flex;
+  }
+
+  .next-form-item {
+    margin-bottom: 0;
+  }
+
+  .array-table-addition {
+    text-align: center;
+  }
+}
+
+.next-select-menu {
+  min-width: 0 !important;
+}
