@@ -66,8 +66,8 @@ const schema: ISchema = {
 export const Demo = () => {
   return <div>
     <SchemaForm 
-      labelCol={7}
-      wrapperCol={12}
+      labelCol={{ span: 7 }}
+      wrapperCol={{ span: 12 }}
       schema={schema}
       effects={($) => {
         $(LifeCycleTypes.ON_FORM_VALUES_CHANGE).subscribe(state => {

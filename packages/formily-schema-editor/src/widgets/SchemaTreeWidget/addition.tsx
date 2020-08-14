@@ -63,8 +63,8 @@ const Form: React.FC<IFormProps> = (props) => {
       <SchemaForm
         labelAlign="left"
         labelTextAlign="left"
-        labelCol={6}
-        wrapperCol={18}
+        labelCol={{ span: 6 }}
+        wrapperCol={{ span: 18}}
         components={{
           Input,
           Select

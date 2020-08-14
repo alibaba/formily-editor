@@ -2,7 +2,7 @@
 import locale from "./locale";
 import { ISchemaEditorProps } from "./types";
 
-import extensions from "@alife/formily-schema-editor-ascp-extensions"
+import extensions from "@formily-editor/ascp-extensions"
 
 // const schema = {
 //   "type": "object",

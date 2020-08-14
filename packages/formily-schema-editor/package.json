@@ -1,5 +1,5 @@
 {
-  "name": "@alife/formily-schema-editor",
+  "name": "@formily-editor/schema-editor",
   "version": "1.0.0",
   "license": "MIT",
   "main": "lib",
@@ -31,7 +31,7 @@
     "@formily/next": "1.2.0",
     "@formily/next-components": "1.2.0",
     "@formily/printer": "1.2.0",
-    "@alife/formily-schema-editor-ascp-extensions": "^1.0.7",
+    "@formily-editor/extensions": "^1.0.0",
     "@storybook/react": "^5.3.14",
     "@testing-library/jest-dom": "^4.2.3",
     "@testing-library/react": "^8.0.0",
