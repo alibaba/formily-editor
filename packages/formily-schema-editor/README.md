@@ -2,8 +2,8 @@
 
 ## 文档
 
-- [产品文档](https://yuque.antfin-inc.com/ascp-fe/f2e/ac8ki6)
-- [架构文档](https://yuque.antfin-inc.com/ascp-fe/f2e/ac8ki6)
+- [产品文档](https://yuque.antfin-inc.com/docs/share/32e4b25c-6b51-4c31-a737-e54f0c4ab5f7)
+- [架构文档](https://yuque.antfin-inc.com/docs/share/ded1e3ea-5e4e-4c63-8442-768b28f322f2)
 
 ## 架构图
 
