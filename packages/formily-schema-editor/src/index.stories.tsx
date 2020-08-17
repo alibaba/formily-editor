@@ -8,8 +8,9 @@ import MonacoEditor from 'react-monaco-editor'
 import useToggle from './hooks/useToggle'
 import useClipboard from './hooks/useClipboard'
 
-export default { title: '主界面' }
-console.log('xxx')
+export default { 
+  title: 'Main',
+}
 
 interface IMode {
   value: string

@@ -1,9 +1,9 @@
 {
   "name": "@formily-editor/schema-editor",
-  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "main": "lib",
   "types": "lib/index.d.ts",
+  "version": "1.0.0-alpha.0",
   "bugs": {
     "url": "https://github.com/alibaba/formily/issues"
   },
@@ -12,10 +12,8 @@
     "npm": ">=3.0.0"
   },
   "scripts": {
-    "build": "npm run lint && webpack --config webpack.config.js",
-    "start": "start-storybook",
-    "test": "jest",
-    "lint": "eslint --ext .ts,.tsx \"src/**.@(ts|tsx|js)\" --fix"
+    "build": "webpack --config webpack.config.js",
+    "start": "start-storybook"
   },
   "resolutions": {
     "@types/react": "^16.8.23"
@@ -25,11 +23,11 @@
     "url": "git+https://github.com/alibaba/formily-editor.git"
   },
   "devDependencies": {
-    "@formily-editor/extensions": "^1.1.0-alpha.0",
+    "@formily-editor/extensions": "^1.0.0-alpha.0",
     "@formily/next": "1.2.0",
     "@formily/next-components": "1.2.0",
     "@formily/printer": "1.2.0",
-    "@storybook/react": "^5.3.14",
+    "@storybook/react": "^6.0.10",
     "@testing-library/jest-dom": "^4.2.3",
     "@testing-library/react": "^8.0.0",
     "@testing-library/react-hooks": "^3.2.1",

@@ -199,7 +199,6 @@ export interface INodeRendererProps {
   onInsert: (e: any, params: any) => void
 }
 
-export interface XRulesSpec {}
 export interface IRulesWidgetProps {
   formLayout?: {}
   defaultValue?: ValidateDescription[]
@@ -210,7 +209,7 @@ export interface IRulesWidgetProps {
   onChange?: (rules: ValidateDescription[]) => void
 }
 
-interface keyValuePairs {
+interface KeyValuePairs {
   [key: string]: any
 }
 
@@ -219,9 +218,9 @@ interface XLinkageSpec {
   type: string
   condition: string
   target: string
-  state?: keyValuePairs
-  schema?: keyValuePairs
-  otherwise: keyValuePairs
+  state?: KeyValuePairs
+  schema?: KeyValuePairs
+  otherwise: KeyValuePairs
 }
 
 type XLinkagesSpec = Array<XLinkageSpec>

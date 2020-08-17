@@ -5,12 +5,20 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "build": "rimraf -rf packages/*/lib && lerna run build",
-    "publish": "lerna publish"
+    "start": "lerna run --scope @formily-editor/schema-editor start",
+    "lint": "eslint --ext .ts,.tsx \"packages/*/src/**.@(ts|tsx|js)\" --fix",
+    "prevesion": "npm run build && npm run lint",
+    "version:alpha": "npm run prevesion && lerna version prerelease --preid alpha --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "version:beta": "npm run prevesion && lerna version prerelease --preid beta --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "version:rc": "npm run prevesion && lerna version prerelease --preid rc --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "version:patch": "npm run prevesion && lerna version patch --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "version:minor": "npm run prevesion && lerna version minor --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "version:preminor": "npm run prevesion && lerna version preminor --preid beta --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "version:major": "npm run prevesion && lerna version major --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "release:force": "lerna publish from-package --yes",
+    "release": "lerna publish"
   },
   "devDependencies": {
-    "lerna": "^3.22.1",
-    "rimraf": "^3.0.0",
-    "prettier": "^1.18.2",
     "@babel/core": "^7.8.7",
     "@formily/react": "^1.0.8",
     "@formily/react-schema-renderer": "^1.0.8",
@@ -27,8 +35,11 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "lerna": "^3.22.1",
+    "prettier": "^1.18.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "rimraf": "^3.0.0",
     "typescript": "^3.5.2"
   }
 }

@@ -23,5 +23,8 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "212afe270d67494df9cb23c67801555191d94103"
+  "gitHead": "212afe270d67494df9cb23c67801555191d94103",
+  "publishConfig": {
+    "access": "public"
+  }
 }
