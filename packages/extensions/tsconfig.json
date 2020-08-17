@@ -1,21 +1,5 @@
 {
-  "compilerOptions": {
-    "outDir": "./lib",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "jsx": "react",
-    "module": "commonjs",
-    "target": "es5",
-    "lib": ["es2015", "es2017", "dom"],
-    "allowJs": false,
-    "noUnusedLocals": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": false,
-    "declaration": false,
-    "baseUrl": ".",
-    "resolveJsonModule": true
-  },
+  "extends": "../../tsconfig.json",
   "include": [
       "./src/**/*.ts",
       "./src/**/*.tsx"

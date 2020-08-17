@@ -1,19 +1,24 @@
-import { IExtensionConfig, SchemaEditorExtension, IExtensionContext, ISchemaEditorExtension } from './types'
+import {
+  IExtensionConfig,
+  SchemaEditorExtension,
+  ISchemaEditorExtension
+} from './types'
 import config from './config'
 
 export default (extensionConfig: IExtensionConfig): SchemaEditorExtension => {
-
-  const { 
-    type, 
-    title, 
-    defaultProps = {}, 
-    getSchema = (schema) => schema, 
-    ...others 
+  const {
+    type,
+    title,
+    defaultProps = {},
+    getSchema = schema => schema,
+    ...others
   } = extensionConfig
 
-  return (context: IExtensionContext): ISchemaEditorExtension => {
+  return (): ISchemaEditorExtension => {
     const xComponent = extensionConfig['x-component']
-    const initialSchema = config[xComponent] ? config[xComponent].schema : {type: "object", properties: {}}
+    const initialSchema = config[xComponent]
+      ? config[xComponent].schema
+      : { type: 'object', properties: {} }
     return {
       type,
       title,
@@ -22,8 +27,7 @@ export default (extensionConfig: IExtensionConfig): SchemaEditorExtension => {
       configs: {
         defaultProps,
         schema: getSchema(initialSchema)
-      },
+      }
     }
-    
   }
 }

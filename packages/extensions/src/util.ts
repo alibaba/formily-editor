@@ -1,6 +1,6 @@
 // import pick from "lodash.pick"
-import { ISchema} from '@formily/react-schema-renderer'
-import { SupportedProps } from './types' 
+import { ISchema } from '@formily/react-schema-renderer'
+import { SupportedProps } from './types'
 
 // const supportedTypes = ["bool", "node", "enum", "string", "number"];
 
@@ -66,14 +66,14 @@ import { SupportedProps } from './types'
 // };
 
 export const apiSchemaToJSONSchema = (
-  supportedProps: SupportedProps<object>,
-) : ISchema => {
+  supportedProps: SupportedProps<object>
+): ISchema => {
   return {
     type: 'object',
     properties: supportedProps
   }
   // if(apiSchema == undefined || !apiSchema.props || Object.keys(apiSchema.props).length === 0)return;
-  
+
   // const props = pick(apiSchema.props, Object.keys(supportedProps))
   // let schema: ISchema = { type: "object", properties: {} }
 
@@ -85,38 +85,41 @@ export const apiSchemaToJSONSchema = (
   // return schema
 }
 
-export const buildDataSourceSchema = (title?: string, description?: string): ISchema => {
+export const buildDataSourceSchema = (
+  title?: string,
+  description?: string
+): ISchema => {
   const dataSourceSchema = {
-    type: "array",
-    title: title || "数据源",
+    type: 'array',
+    title: title || '数据源',
     description: description,
-    "x-component": "SimpleArrayTable",
-    "x-component-props": {
+    'x-component': 'SimpleArrayTable',
+    'x-component-props': {
       canRemoveAll: true
     },
     items: {
-      type: "object",
+      type: 'object',
       properties: {
-        "label": {
-          type: "string",
+        label: {
+          type: 'string',
           required: true,
-          "x-component-props": {
-            placeholder: "标签",
+          'x-component-props': {
+            placeholder: '标签'
           }
         },
-        "value": {
-          type: "string",
+        value: {
+          type: 'string',
           required: true,
-          "x-component-props": {
-            placeholder: "值",
+          'x-component-props': {
+            placeholder: '值'
           }
-        },
+        }
         // "disabled": {
         //   type: "boolean",
         //   title: "是否禁用",
         // }
       }
-    },
+    }
   }
 
   return dataSourceSchema

@@ -17,7 +17,6 @@ import { SelectExtension } from './Select'
 import { SelectMultiExtension } from './SelectMulti'
 import { FormDialogExtension } from './FormDialog'
 
-
 import factory from './factory'
 
 const extensionList = [
@@ -28,10 +27,10 @@ const extensionList = [
   FormCardExtension,
   InputExtension,
   NumberPickerExtension,
-  RadioExtension, 
-  RangeExtension, 
-  FormExtension, 
-  SwitchExtension, 
+  RadioExtension,
+  RangeExtension,
+  FormExtension,
+  SwitchExtension,
   TimePickerExtension,
   TransferExtension,
   RequestSelectExtension,
@@ -41,19 +40,17 @@ const extensionList = [
   FormDialogExtension
 ]
 
-export const extensions = extensionList.reduce((buf, cur) =>  {
-  const extensionKey =  cur.extensionKey || `${cur['x-component'].toLowerCase()}Extension`
+export const extensions = extensionList.reduce((buf, cur) => {
+  const extensionKey =
+    cur.extensionKey || `${cur['x-component'].toLowerCase()}Extension`
 
   buf[extensionKey] = factory(cur)
 
   return buf
 }, {})
 
-Object.keys(extensions).forEach(key => {
-  console.log('key-------', key)
-
-  console.log(JSON.stringify(extensions[key](), null, 4))
-
-})
+// Object.keys(extensions).forEach(key => {
+//   console.log(JSON.stringify(extensions[key](), null, 4))
+// })
 
 export default extensions
