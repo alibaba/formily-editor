@@ -15,8 +15,8 @@
 </video>
 
 ## 背景
-基于[Formily]()，我们可以实现通过一份JSON SCHEMA渲染出一个表单。
-这份SCHEMA可以通过开发者手写，但是更多的时候需要开放给非技术人员配置。
+Formily提供了[JSON SCHEMA开发表单](https://formilyjs.org/#/0yTeT0/8MsesjHa)的能力，因此我们可以实现通过一份JSON SCHEMA渲染出一个表单。
+这份SCHEMA可以通过开发者手写，但是更多的时候需要开放给非技术人员通过配置的方式生成。
 因此，Formily-Schema-Editor出现了，它帮助不熟悉具体技术细节的用户生产SCHEMA，进而可以自己设计属于他们的表单。
 
 
