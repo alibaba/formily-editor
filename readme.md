@@ -23,7 +23,7 @@ Formily提供了[JSON SCHEMA开发表单](https://formilyjs.org/#/0yTeT0/8MsesjH
 
 
 ## 功能
-https://yuque.antfin-inc.com/docs/share/5ac32b31-2291-494e-8da7-f1f697156280?# 《表单配置器说明书》
+
 
 ## 安装
 
