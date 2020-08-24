@@ -23,7 +23,7 @@ Formily提供了[JSON SCHEMA开发表单](https://formilyjs.org/#/0yTeT0/8MsesjH
 
 
 ## 功能
-
+![Formily-editor说明书](https://github.com/alibaba/formily-editor/blob/master/docs/zh-cn/summary.md)
 
 ## 安装
 
