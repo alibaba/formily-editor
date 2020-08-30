@@ -16,7 +16,10 @@
     "version:preminor": "npm run prevesion && lerna version preminor --preid beta --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
     "version:major": "npm run prevesion && lerna version major --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
     "release:force": "lerna publish from-package --yes",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "doc:build": "dumi build",
+    "doc:deploy": "gh-pages -d dist",
+    "doc: start": "npx dumi dev"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
