@@ -8,4 +8,7 @@
     "./src/__tests__/*",
     "./node_modules"
   ],
+  "compilerOptions": {
+    "outDir": "./build",
+  },
 }

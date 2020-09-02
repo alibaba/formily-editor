@@ -10,8 +10,8 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": false,
-    "outDir": "./lib",
     "baseUrl": ".",
+    "declaration": true,
     "lib": [
       "es6",
       "dom",

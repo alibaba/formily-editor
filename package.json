@@ -19,7 +19,7 @@
     "release": "lerna publish",
     "doc:build": "dumi build",
     "doc:deploy": "gh-pages -d dist",
-    "doc: start": "npx dumi dev"
+    "doc:start": "npx dumi dev"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
