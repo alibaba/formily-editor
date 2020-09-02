@@ -13,7 +13,7 @@ const mapper = {
 }
 
 // 固定不开启表达式功能的配置字段
-const expressionExcludeKeys = ['key', 'type', 'x-component', 'x-rules'] 
+const expressionExcludeKeys = ['key', 'type', 'x-component', 'x-rules', 'default'] 
 
 const appendXComponent = (schema: ISchema, expression: boolean = false) => {
   if(!schema || Object.keys(schema.properties).length === 0)return schema;
