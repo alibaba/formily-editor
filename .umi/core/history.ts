@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory } from '/Users/liuqiao/projects/git/SchemaEditor/node_modules/_@umijs_runtime@3.2.19@@umijs/runtime';
+import { createBrowserHistory } from '/Users/liuqiao/projects/formily-editor/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"

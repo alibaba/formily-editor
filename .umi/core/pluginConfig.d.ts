@@ -65,7 +65,7 @@ export interface IConfigFromPlugins {
     mode?: "emit" | "verify";
   };
   cssnano?: {};
-  copy?: string[];
+  copy?: any[];
   define?: {};
   devScripts?: {};
   /**

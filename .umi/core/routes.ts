@@ -1,12 +1,14 @@
 // @ts-nocheck
-import { ApplyPluginsType } from '/Users/liuqiao/projects/git/SchemaEditor/node_modules/_@umijs_runtime@3.2.19@@umijs/runtime';
+import React from 'react';
+import { ApplyPluginsType } from '/Users/liuqiao/projects/formily-editor/node_modules/@umijs/runtime';
+import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 
 export function getRoutes() {
   const routes = [
   {
     "path": "/",
-    "component": (props) => require('react').createElement(require('../../node_modules/_@umijs_preset-dumi@1.0.34@@umijs/preset-dumi/lib/themes/default/layout.js').default, {
+    "component": (props) => require('react').createElement(require('../../node_modules/@umijs/preset-dumi/lib/themes/default/layout.js').default, {
       ...{"menus":{"*":{"*":[{"path":"/","title":"README","meta":{"order":null}},{"title":"Zh-cn","path":"/zh-cn","meta":{},"children":[{"path":"/zh-cn/summary","title":"说明书","meta":{}}]}]}},"locales":[],"navs":{},"title":"Formily Schema Editor","mode":"doc","repoUrl":"https://github.com/alibaba/formily-editor"},
       ...props,
     }),
@@ -28,7 +30,7 @@ export function getRoutes() {
         "exact": true,
         "meta": {
           "filePath": "docs/zh-cn/summary.md",
-          "updatedTime": 1598256990000,
+          "updatedTime": 1598799829000,
           "slugs": [
             {
               "depth": 1,

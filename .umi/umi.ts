@@ -4,8 +4,8 @@ import '@@/core/devScripts';
 import { plugin } from './core/plugin';
 import './core/pluginRegister';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from '/Users/liuqiao/projects/git/SchemaEditor/node_modules/_@umijs_runtime@3.2.19@@umijs/runtime';
-import { renderClient } from '/Users/liuqiao/projects/git/SchemaEditor/node_modules/_@umijs_renderer-react@3.2.19@@umijs/renderer-react/dist/index.js';
+import { ApplyPluginsType } from '/Users/liuqiao/projects/formily-editor/node_modules/@umijs/runtime';
+import { renderClient } from '/Users/liuqiao/projects/formily-editor/node_modules/@umijs/renderer-react/dist/index.js';
 import { getRoutes } from './core/routes';
 
 
@@ -37,7 +37,7 @@ export default clientRender();
 
 
     window.g_umi = {
-      version: '3.2.19',
+      version: '3.2.21',
     };
   
 
