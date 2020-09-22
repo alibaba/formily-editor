@@ -1,4 +1,5 @@
 export default {
   title: 'Formily Schema Editor',
-  exportStatic: {}
+  exportStatic: {},
+  publicPath: './'
 }
