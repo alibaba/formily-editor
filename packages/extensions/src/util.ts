@@ -103,6 +103,7 @@ export const buildDataSourceSchema = (
         label: {
           type: 'string',
           required: true,
+          default:'',
           'x-component-props': {
             placeholder: '标签'
           }
@@ -110,6 +111,7 @@ export const buildDataSourceSchema = (
         value: {
           type: 'string',
           required: true,
+          default:'',
           'x-component-props': {
             placeholder: '值'
           }
