@@ -8,8 +8,8 @@ import MonacoEditor from 'react-monaco-editor'
 import useToggle from './hooks/useToggle'
 import useClipboard from './hooks/useClipboard'
 
-export default { 
-  title: 'Main',
+export default {
+  title: 'Main'
 }
 
 interface IMode {
@@ -28,8 +28,11 @@ export const Demo = () => {
   const JsonSchemaMonaco = useRef(null)
   const JsonMonaco = useRef(null)
 
+  const formRef = React.useRef({}) // fix: schema 不会双向更新,导出json的时候，需要从 form 去获取。
+
   const renderToolbar = context => {
     const { mode, MODES, setMode, getSchema } = context
+    formRef.current = context
     return (
       <Fragment>
         <Button.Group>
@@ -158,16 +161,16 @@ export const Demo = () => {
         footer={renderExportDialogFooter()}
         onClose={toggleExportDialogVisible}
       >
-        <MonacoEditor
+       {exportDialogVisible && <MonacoEditor
           ref={ref}
           width="500"
           height="400"
           language="json"
-          value={JSON.stringify(schema, null, '\t')}
+          value={JSON.stringify(formRef.current.getSchema(), null, '\t')}
           options={{
             readOnly: true
           }}
-        />
+        />} 
       </Dialog>
     </Fragment>
   )
