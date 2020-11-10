@@ -5,6 +5,7 @@ import { useEditor } from "../../hooks/useEditor"
 import getConfigurePanleProps from './getConfigurePanleProps'
 import effect from './effect'
 import { isEmpty, lowercase } from '../../shared'
+import { set } from "lodash";
 
 import './style.scss'
 
@@ -35,62 +36,88 @@ export const ConfigurePanel = ({ layout }) => {
 
    useEffect(() => {
      // 根节点，布局，对象无联动tab
-     actions.setFieldState('tabs', state => {
-      state.props['x-component-props'] = state.props['x-component-props'] || {}
-      state.props['x-component-props'].hiddenKeys = 
-      (!isObject && !isLayout && !isRoot) ? [] : ['linkageTabPane']
-     })
+    actions.setFieldState("tabs", (state) => {
+      set(
+        state,
+        `props.x-component-props.hiddenKeys`,
+        !isObject && !isLayout && !isRoot ? [] : ["linkageTabPane"]
+      );
+    });
 
-     actions.setFieldState('tabs.propertyTabPane.xComponentPropsCard', state => {
-       let display = true;
-       if(isRoot){
-        display = true;
-       } else if(isObject){
-        display = false;
-       } else if(!extensionSchema || isEmpty(extensionSchema.properties)){
-        display = false
-       }
-       state.display = display
-     })
-  
-     // 根节点无基本属性配置
-     actions.setFieldState('tabs.propertyTabPane.basicConfigure', state => {
-       state.display = !isRoot
-     })
-
-     // 更新基本属性配置 schema
-     actions.setFieldState('tabs.propertyTabPane.basicConfigure.commconConfig', state => {
-      state.props['x-component-props'] = state.props['x-component-props'] || {}
-      state.props['x-component-props'].fieldSchema = commonConfigSchema
-     })
-
-     // 更新控件配置 schema
-     actions.setFieldState('tabs.propertyTabPane.xComponentPropsCard.x-component-props.extensionProps', state => {
-      state.props['x-component-props'] = state.props['x-component-props'] || {}
-      state.props['x-component-props'].fieldSchema = extensionSchema
-     })
-
-     actions.setFieldState('tabs.propertyTabPane.basicConfigure.commconConfig.x-rules', state => {
-      state.props['x-component-props'] = state.props['x-component-props'] || {}
-      state.props['x-component-props'].type = type
-      state.props['x-component-props'].xComponent = currentSchema['x-component']
-      state.props['x-component-props'].formLayout = layout
-     })
-
-     actions.setFieldState('tabs.propertyTabPane.basicConfigure.commconConfig.x-component', state => {
-      state.props['x-component-props'] = state.props['x-component-props'] || {}
-      state.props['x-component-props'].dataSource = xComponentDataSource
-     })
-
-     // 默认值配置项使用的输入组件
-     actions.setFieldState('tabs.propertyTabPane.basicConfigure.commconConfig.default', state => {
-      state.props['x-component'] = xComponentForDefaultField
-      state.props['x-component-props'] = state.props['x-component-props'] || {}
-      state.props['x-component-props'].emptyValue = currentSchema.getEmptyValue()
-      state.props['x-component-props'].validator = (v) => {
-        return lowercase(Object.prototype.toString.call(v)) === `[object ${lowercase(currentSchema.type)}]`
+    actions.setFieldState(
+      "tabs.propertyTabPane.xComponentPropsCard",
+      (state) => {
+        let display = true;
+        if (isRoot) {
+          display = true;
+        } else if (isObject) {
+          display = false;
+        } else if (!extensionSchema || isEmpty(extensionSchema.properties)) {
+          display = false;
+        }
+        state.display = display;
       }
-     })
+    );
+
+    // 根节点无基本属性配置
+    actions.setFieldState("tabs.propertyTabPane.basicConfigure", (state) => {
+      state.display = !isRoot;
+    });
+
+    // 更新基本属性配置 schema
+    actions.setFieldState(
+      "tabs.propertyTabPane.basicConfigure.commconConfig",
+      (state) => {
+        set(state, `props.x-component-props.fieldSchema`, commonConfigSchema);
+      }
+    );
+
+    // 更新控件配置 schema
+    actions.setFieldState(
+      "tabs.propertyTabPane.xComponentPropsCard.x-component-props.extensionProps",
+      (state) => {
+        set(state, `props.x-component-props.fieldSchema`, extensionSchema);
+      }
+    );
+
+    actions.setFieldState(
+      "tabs.propertyTabPane.basicConfigure.commconConfig.x-rules",
+      (state) => {
+        set(state, `props.x-component-props.type`, type);
+        set(
+          state,
+          `props.x-component-props.xComponent`,
+          currentSchema["x-component"]
+        );
+        set(state, `props.x-component-props.formLayout`, layout);
+      }
+    );
+
+    actions.setFieldState(
+      "tabs.propertyTabPane.basicConfigure.commconConfig.x-component",
+      (state) => {
+        set(state, `props.x-component-props.dataSource`, xComponentDataSource);
+      }
+    );
+
+    // 默认值配置项使用的输入组件
+    actions.setFieldState(
+      "tabs.propertyTabPane.basicConfigure.commconConfig.default",
+      (state) => {
+        set(state, `props.x-component`, xComponentForDefaultField);
+        set(
+          state,
+          `props.x-component-props.emptyValue`,
+          currentSchema.getEmptyValue()
+        );
+        set(state, `props.x-component-props.validator`, (v) => {
+          return (
+            lowercase(Object.prototype.toString.call(v)) ===
+            `[object ${lowercase(currentSchema.type)}]`
+          );
+        });
+      }
+    );
 
    // path变化代表当前节点切换
    }, [path])
