@@ -1,5 +1,15 @@
+const getRule = (str: string) => {
+  if (/^{{(.*)}}$/.test(str)) {
+    return (/^{{(.*)}}$/.exec(str)[1] || '').trim()
+  }
+}
+
+const addExpression = str => {
+  return `{{${str}}}`
+}
+
 export function test(str) {
-  return toReg(str) instanceof RegExp
+  return toReg(getRule(str)) instanceof RegExp
 }
 
 export function toReg(str) {
@@ -23,15 +33,14 @@ export function toStr(reg) {
 }
 
 export function transform(regStr) {
+  regStr = getRule(regStr)
   const match = regStr.match(/^\/(.*)\/([a-z]*)$/i)
-
   if (!match) {
     return ['', []]
   }
-
   return [match[1], [...match[2]]]
 }
 
 export function restore(content, flags) {
-  return `/${content}/${flags.join('')}`
+  return addExpression(`/${content}/${flags.join('')}`)
 }

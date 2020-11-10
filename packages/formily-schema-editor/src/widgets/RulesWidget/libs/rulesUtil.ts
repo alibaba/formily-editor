@@ -82,7 +82,7 @@ export function restore(ruleDesp, type) {
 
     if (ruleDesp.patterns) {
       rules.push(...ruleDesp.patterns.map(pattern => ({
-        pattern: regUtil.toReg(pattern.pattern),
+        pattern: pattern.pattern,
         message: pattern.message,
       })))
     }
